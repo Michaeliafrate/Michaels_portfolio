@@ -128,8 +128,8 @@
     }
 
     .hero-photo {
-      width: 210px;
-      height: 210px;
+      width: clamp(150px, 44vw, 210px);
+      aspect-ratio: 1;
       margin-bottom: 2rem;
       border-radius: 50%;
       border: 3px solid var(--gold);
@@ -433,9 +433,38 @@
       body { animation: none; }
     }
 
-    @media (max-width: 560px) {
-      .nav { justify-content: center; }
+    @media (max-width: 640px) {
+      .container { padding: 0 1.15rem; }
+      section { padding: 2.75rem 0; }
+      .hero { padding: 3.25rem 0 2.75rem; }
+
+      .nav { justify-content: center; gap: 0.35rem 0.9rem; padding: 0.7rem 1rem; }
+      .nav-name { font-size: 0.92rem; }
+      .nav-links { gap: 0.45rem 0.85rem; justify-content: center; }
+      .nav-links a { font-size: 0.8rem; }
+      .nav-links a::before { margin-right: 0.2rem; }
+
+      .hero-photo { margin-bottom: 1.5rem; }
+      .hero h1 { font-size: clamp(1.85rem, 8vw, 2.5rem); }
+      .hero-kicker { font-size: 0.82rem; }
+
+      h2 { font-size: 1.2rem; margin-bottom: 1.35rem; }
+      h2::after { max-width: 80px; }
+
+      .card { padding: 1.15rem 1.2rem; }
       .card-head { flex-direction: column; }
+      .card-date { font-size: 0.75rem; }
+
+      .skill-group { padding: 1.1rem 1.2rem; }
+
+      .btn { padding: 0.6rem 1rem; font-size: 0.85rem; }
+
+      .contact-label { min-width: 82px; }
+    }
+
+    @media (max-width: 360px) {
+      .hero-links { flex-direction: column; align-items: stretch; width: 100%; }
+      .btn { text-align: center; }
     }
   </style>
 </head>
@@ -465,9 +494,10 @@
         <div class="hero-text">
           <p class="hero-kicker">// WVU · Management Information Systems · Cybersecurity</p>
           <h1>Michael L. Iafrate<span class="accent">.</span></h1>
-          <p class="tagline">Management Information Systems student at <strong>West Virginia University</strong> with a minor in <strong>Cybersecurity</strong>. Based in Weirton, WV.</p>
+          <p class="tagline">Management Information Systems student with a Cybersecurity minor, focused on where <strong>business and technology</strong> meet — building practical, reliable software across databases, application development, and security. Based in Weirton, WV.</p>
           <div class="hero-links">
-            <a class="btn btn-gold" href="mailto:mli00003@mix.wvu.edu">Email Me</a>
+            <a class="btn btn-gold" href="mailto:iafratem@icloud.com">Email Me</a>
+            <a class="btn btn-outline" href="Michael_Iafrate_Resume.pdf" target="_blank" rel="noopener">Resume</a>
             <a class="btn btn-outline" href="https://www.linkedin.com/in/michael-iafrate-0626472a3/" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn btn-outline" href="https://github.com/Michaeliafrate" target="_blank" rel="noopener">GitHub</a>
           </div>
@@ -653,8 +683,9 @@
     <div class="container reveal">
       <h2><span class="h2-num">06.</span> Contact</h2>
       <ul class="contact-list">
-        <li><span class="contact-label">email</span> <a href="mailto:mli00003@mix.wvu.edu">mli00003@mix.wvu.edu</a></li>
+        <li><span class="contact-label">email</span> <a href="mailto:iafratem@icloud.com">iafratem@icloud.com</a></li>
         <li><span class="contact-label">phone</span> <a href="tel:+14123376858">(412) 337-6858</a></li>
+        <li><span class="contact-label">resume</span> <a href="Michael_Iafrate_Resume.pdf" download>Download PDF</a></li>
         <li><span class="contact-label">linkedin</span> <a href="https://www.linkedin.com/in/michael-iafrate-0626472a3/" target="_blank" rel="noopener">linkedin.com/in/michael-iafrate-0626472a3</a></li>
         <li><span class="contact-label">github</span> <a href="https://github.com/Michaeliafrate" target="_blank" rel="noopener">github.com/Michaeliafrate</a></li>
         <li><span class="contact-label">location</span> Weirton, WV</li>
