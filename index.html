@@ -330,29 +330,10 @@
     .org a { border-bottom: 1px solid var(--line-control); }
     .org a:hover { border-color: var(--gold); }
 
-    .bullets {
-      margin-top: 0.85rem;
-      list-style: none;
-      display: grid;
-      gap: 0.5rem;
-      max-width: var(--measure);
-    }
-    .bullets li {
-      position: relative;
-      padding-inline-start: 1.15rem;
-      color: var(--ink-2);
-      font-size: 0.96rem;
-      hyphens: auto;
-    }
-    .bullets li::before {
-      content: "";
-      position: absolute;
-      inset-inline-start: 0;
-      top: 0.72em;
-      width: 0.5rem;
-      height: 1px;
-      background: var(--gold);
-    }
+    /* prose inside an entry does the bullets' old job: same top gap, same
+       measure, same size, inherits the body leading */
+    .entry .prose { margin-top: 0.85rem; font-size: 0.96rem; }
+    .prose + .prose { margin-top: 0.9rem; }
 
     .source {
       display: inline-block;
@@ -497,7 +478,7 @@
            backgrounds, which would erase every rule, dash, and dot ---- */
     @media (forced-colors: active) {
       #net, body::before { display: none; }
-      .bullets li::before, .status::before { background: CanvasText; }
+      .status::before { background: CanvasText; }
       .btn { border: 1px solid ButtonBorder; }
       .chip, .status { border-color: CanvasText; }
       .section-title::after { background: CanvasText; }
@@ -537,7 +518,7 @@
       .portrait { width: 22mm; box-shadow: none; border-color: #999; }
       h1 { font-size: 20pt; }
       .lede { font-size: 11pt; max-width: none; }
-      .prose, .bullets, .coursework { max-width: none; }
+      .prose, .coursework { max-width: none; }
 
       /* avoid breaks inside an entry, never inside a whole section —
          a section taller than the page would otherwise fill pages badly */
@@ -612,11 +593,7 @@
         <div>
           <h3>Tech Intern</h3>
           <p class="org">Martich Tech Solutions · Weirton, WV · <a href="https://www.martichtech.com/" target="_blank" rel="noopener">martichtech.com<span class="vh"> (opens in a new tab)</span></a></p>
-          <ul class="bullets">
-            <li>Installed and configured network infrastructure (routers, switches, LAN/WAN, security systems) for 10+ clients.</li>
-            <li>Deployed and tested 3 POS systems, handling hardware setup, network connectivity, and pre-launch validation.</li>
-            <li>Diagnosed and repaired 5 custom-built PCs, covering hardware replacement and OS-level troubleshooting.</li>
-          </ul>
+          <p class="prose">I worked as a tech intern at Martich Tech Solutions in Weirton for two years. I installed and configured network equipment for more than ten business clients, including routers, switches, LAN and WAN setups, and security systems. I also deployed and tested three point-of-sale systems, which covered the hardware, the network connection, and checking everything before the client went live. On the repair side, I diagnosed and rebuilt five custom PCs, replacing hardware and troubleshooting at the operating system level.</p>
         </div>
       </article>
 
@@ -630,10 +607,7 @@
         <div>
           <h3>Freelance Website Project</h3>
           <p class="org">HTML, CSS, JavaScript &middot; Cloudflare Pages &middot; Claude Code</p>
-          <ul class="bullets">
-            <li>Designed, built, and deployed a promotional site on Cloudflare Pages for a retired professional athlete, directing an AI-assisted development workflow end to end while managing the client solo across 28 revisions in one week.</li>
-            <li>Created the site to give the client a professional platform for promoting and selling his forthcoming memoir, using his life story to draw readers toward the release.</li>
-          </ul>
+          <p class="prose">In August 2026 I built a website for a retired professional athlete who is releasing a memoir. The site promotes the book, tells his story, and gives readers a place to buy it. I designed it, built it in HTML, CSS, and JavaScript, and deployed it on Cloudflare Pages. I worked with the client directly and on my own, and we went through 28 rounds of revisions in one week. I used Claude Code throughout and directed the AI-assisted workflow from start to finish.</p>
         </div>
       </article>
 
@@ -648,13 +622,8 @@
         <div class="when"><time datetime="2026-01">Jan</time> — <time datetime="2026-05">May 2026</time></div>
         <div>
           <h3>NFL Full-Stack Application Project</h3>
-          <ul class="bullets">
-            <li>Collaborated on a 4–5 person team to build a full-stack application with REST API integration.</li>
-            <li>Developed 10+ modular UI components supporting a scalable front-end architecture.</li>
-            <li>Tested and validated API endpoints, improving application stability and performance.</li>
-            <li>Worked in weekly sprint cycles with iterative debugging and feature deployment.</li>
-            <li>Used AI tools (Claude) to speed up debugging and code review during sprints.</li>
-          </ul>
+          <p class="prose">This was a team project for MIST 353. Each of us built our own version of a full-stack NFL app. The app lets fans log in and follow their teams, and lets admins schedule games, with each scheduled game logged against the admin who made it.</p>
+          <p class="prose">My version has three parts: a SQL Server database on Azure with stored procedures and a trigger, a FastAPI back end that exposes those procedures as REST endpoints, and a Streamlit front end that calls the API. A GitHub Actions workflow deployed the API to Azure App Service on every push. I built the front end from more than ten reusable components, tested the API endpoints, and worked in weekly sprints. I used Claude to help with debugging and code review.</p>
           <a class="source" href="https://github.com/Michaeliafrate/MIST353_NFL_Iafrate" target="_blank" rel="noopener">View source on GitHub<span class="vh"> (opens in a new tab)</span></a>
         </div>
       </article>
@@ -663,11 +632,7 @@
         <div class="when"><time datetime="2025-08">Aug</time> — <time datetime="2025-12">Dec 2025</time></div>
         <div>
           <h3>Relational Database Design (SQL)</h3>
-          <ul class="bullets">
-            <li>Designed a normalized relational schema with 10+ entities and their relationships, modeled as entity-relationship diagrams in Lucidchart.</li>
-            <li>Built and validated 20+ MySQL tables with PK/FK constraints for referential integrity.</li>
-            <li>Wrote 100+ SQL queries (joins, aggregations, filtering) for analysis and reporting.</li>
-          </ul>
+          <p class="prose">My database class covered relational database design and SQL. This is where I learned to model entities and their relationships as entity-relationship diagrams, which I drew in Lucidchart, and to turn a diagram into a working schema. Over the semester I designed a database with more than five entities, built each one as a MySQL table with primary and foreign keys to keep the data consistent, and learned SQL by writing more than a hundred queries against it using joins, aggregation, and filtering.</p>
         </div>
       </article>
 
@@ -675,11 +640,7 @@
         <div class="when"><time datetime="2025-08">Aug</time> — <time datetime="2025-12">Dec 2025</time></div>
         <div>
           <h3>C# Development</h3>
-          <ul class="bullets">
-            <li>Developed 5+ C# applications using object-oriented programming principles.</li>
-            <li>Identified and resolved 50+ bugs through systematic debugging in Visual Studio.</li>
-            <li>Managed version control across multiple repositories using Git and GitHub.</li>
-          </ul>
+          <p class="prose">My C# class covered object-oriented programming in .NET. Over the semester I built more than five console applications. One of them was a workshop reservation system with separate classes for the session, the seats, and the participants, where a seat controls its own booked state and rejects a booking once it is taken. I fixed more than fifty bugs along the way, mostly by working through them in the Visual Studio debugger, and I kept the code in a GitHub repository, which is where I got comfortable with Git.</p>
           <a class="source" href="https://github.com/Michaeliafrate/Michael_Iafrate_MIST352_Fall2025" target="_blank" rel="noopener">View source on GitHub<span class="vh"> (opens in a new tab)</span></a>
         </div>
       </article>
