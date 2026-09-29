@@ -602,7 +602,7 @@
         <div>
           <h3>Tech Intern</h3>
           <p class="org">Martich Tech Solutions · Weirton, WV · <a href="https://www.martichtech.com/" target="_blank" rel="noopener">martichtech.com<span class="vh"> (opens in a new tab)</span></a></p>
-          <p class="prose">I worked as a tech intern at Martich Tech Solutions in Weirton for two years. I configured and deployed routers, POS security, and security camera systems for more than ten business clients. I also deployed and tested three point-of-sale systems, which covered the hardware, the network connection, and checking everything before the client went live. On the repair side, I diagnosed and rebuilt five custom PCs, replacing hardware and troubleshooting at the operating system level. Beyond the IT work, I helped create websites for local restaurants and piloted drones for real estate.</p>
+          <p class="prose">I worked as a tech intern at Martich Tech Solutions in Weirton for two years. I configured and deployed routers, POS systems, and security cameras for more than ten business clients. I also deployed three point-of-sale systems end to end, covering the hardware, the network connection, and checking everything before the business went live. On the repair side, I diagnosed and rebuilt five custom PCs, replacing hardware and troubleshooting at the operating system level. Beyond the IT work, I helped create websites for local restaurants and piloted drones for real estate.</p>
         </div>
       </article>
 
@@ -621,9 +621,10 @@
       <article class="entry">
         <div class="when"><time datetime="2026-01">Jan</time> — <time datetime="2026-05">May 2026</time></div>
         <div>
-          <h3>NFL Full-Stack Application Project</h3>
+          <h3>NFL Playoffs Full-Stack Application</h3>
+          <p class="org">Python &middot; FastAPI &middot; Streamlit &middot; Azure SQL</p>
           <p class="prose">This was a four-person team project for MIST 353. Each of us built our own version of a full-stack NFL app. The app lets fans log in and follow their teams, and lets admins schedule games, with each scheduled game logged against the admin who made it.</p>
-          <p class="prose">The app has three parts: a SQL Server database on Azure with stored procedures and a trigger, a FastAPI back end that exposes those procedures as REST endpoints, and a Streamlit front end that calls the API. A GitHub Actions workflow deployed the API to Azure App Service on every push. I built the front end from more than ten reusable components, tested the API endpoints to catch integration issues before deployment, and shipped features in weekly sprints. I used Claude to help with debugging and code review.</p>
+          <p class="prose">The app has three parts: a Python and FastAPI REST API with eight endpoints, a Streamlit front end, and an Azure SQL database. I designed the ten-table database in Lucidchart and wrote nine stored procedures plus a trigger that automatically logs every admin change to the game schedule. A GitHub Actions CI/CD pipeline deployed the API to Microsoft Azure automatically, and I delivered features in weekly sprints with iterative testing and debugging. I used Claude to help with debugging and code review.</p>
           <a class="source" href="https://github.com/Michaeliafrate/MIST353_NFL_Iafrate" target="_blank" rel="noopener">View source on GitHub<span class="vh"> (opens in a new tab)</span></a>
         </div>
       </article>
@@ -632,7 +633,7 @@
         <div class="when"><time datetime="2025-08">Aug</time> — <time datetime="2025-12">Dec 2025</time></div>
         <div>
           <h3>Relational Database Design (SQL)</h3>
-          <p class="prose">My database class covered relational database design and SQL. This is where I learned to model entities and their relationships as entity-relationship diagrams, which I drew in Lucidchart, and to turn a diagram into a working schema. Over the semester I designed a database with more than five entities, built each one as a MySQL table with primary and foreign keys to keep the data consistent, and learned SQL by writing more than a hundred queries against it using joins, aggregation, and filtering to answer business reporting questions.</p>
+          <p class="prose">My database class covered relational database design and SQL. This is where I learned to model entities and their relationships as entity-relationship diagrams (ERDs), which I drew in Lucidchart, and to turn a diagram into a working schema. Over the semester I designed a database with more than five entities, built each one as a MySQL table with primary and foreign keys to keep the data consistent, and learned SQL by writing more than a hundred queries against it using joins, aggregation, and filtering to answer business reporting questions.</p>
         </div>
       </article>
 
@@ -640,7 +641,7 @@
         <div class="when"><time datetime="2025-08">Aug</time> — <time datetime="2025-12">Dec 2025</time></div>
         <div>
           <h3>C# Development</h3>
-          <p class="prose">My C# class covered object-oriented programming in .NET. Over the semester I built more than five console applications. One of them was a workshop reservation system with separate classes for the session, the seats, and the participants, where a seat controls its own booked state and rejects a booking once it is taken. I worked through bugs systematically in the Visual Studio debugger and kept the code in a GitHub repository, which is where I got comfortable with Git.</p>
+          <p class="prose">My C# class covered object-oriented programming in .NET. Over the semester I built more than five console applications in Visual Studio, designing each one with UML class diagrams and core object-oriented principles. One of them was a workshop reservation system with separate classes for the session, the seats, and the participants, where a seat controls its own booked state and rejects a booking once it is taken. I worked through bugs systematically in the Visual Studio debugger and kept the code in a GitHub repository, which is where I got comfortable with Git.</p>
           <a class="source" href="https://github.com/Michaeliafrate/Michael_Iafrate_MIST352_Fall2025" target="_blank" rel="noopener">View source on GitHub<span class="vh"> (opens in a new tab)</span></a>
         </div>
       </article>
@@ -669,14 +670,13 @@
           <div class="skill-label">Tools</div>
           <div class="chips">
             <span class="chip">MySQL</span>
-            <span class="chip">SQL Server</span>
+            <span class="chip">Azure SQL</span>
             <span class="chip">FastAPI</span>
             <span class="chip">Streamlit</span>
-            <span class="chip">Azure</span>
+            <span class="chip">Microsoft Azure</span>
             <span class="chip">Git / GitHub</span>
             <span class="chip">GitHub Actions</span>
             <span class="chip">Visual Studio</span>
-            <span class="chip">VS Code</span>
             <span class="chip">Cloudflare Pages</span>
             <span class="chip">Claude Code</span>
             <span class="chip">Wireshark</span>
@@ -689,7 +689,7 @@
           <div class="skill-label">Concepts</div>
           <div class="chips">
             <span class="chip">Database Design</span>
-            <span class="chip">Entity-Relationship Modeling</span>
+            <span class="chip">Entity-Relationship Diagrams (ERDs)</span>
             <span class="chip">Normalization</span>
             <span class="chip">PK/FK Constraints</span>
             <span class="chip">UML Class Diagrams</span>
@@ -703,13 +703,13 @@
             <span class="chip">Requirements Gathering</span>
             <span class="chip">Requirements Specification</span>
             <span class="chip">Use Case Modeling</span>
+            <span class="chip">UML Documentation</span>
             <span class="chip">Agile / Scrum</span>
-            <span class="chip">LAN/WAN Networking</span>
-            <span class="chip">Router Configuration</span>
+            <span class="chip">Router Configuration (LAN)</span>
+            <span class="chip">Blink Security Camera Installation</span>
             <span class="chip">Network Security</span>
             <span class="chip">AI-Assisted Development</span>
             <span class="chip">Code Review</span>
-            <span class="chip">Technical Documentation</span>
           </div>
         </div>
       </div>
